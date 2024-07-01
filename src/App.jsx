@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import TrendingMovies from './pages/TrendingMovies';
 import { Toaster } from "@/components/ui/sonner.jsx";
 
 // Make sure select one of the following layouts: default.jsx, navbar.jsx, sidebar.jsx depending on your project
@@ -18,7 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<SharedLayout />}>
                 <Route index element={<Index />} />
-                {/* Add more routes here as needed */}
+                <Route path="/trending-movies" element={<TrendingMovies />} />
               </Route>
             </Routes>
           </Router>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Index() {
   return (
     <main className="flex flex-1">
@@ -7,6 +9,11 @@ function Index() {
         <p className="text-center">
           Chat with the agent to start making edits.
         </p>
+        <div className="text-center mt-4">
+          <Link to="/trending-movies" className="text-blue-500 hover:underline">
+            View Trending Movies
+          </Link>
+        </div>
       </div>
     </main>
   );
